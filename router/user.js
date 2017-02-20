@@ -1,0 +1,44 @@
+var express=require('express');
+var router=express.Router();
+
+//1、返回首页
+router.get('/',function(req,res){
+	res.render('./index.html',{title:'首页'});
+})
+//2、返回文章列表页
+router.get('/articleList',function(req,res){
+	res.render('./articleList.html',{title:'文章列表页'});
+})
+//3、返回文章详情页
+router.get('/articleDetail',function(req,res){
+	res.render('./articleDetail.html',{title:'文章详情页',data:req.query.data});
+})
+//4、返回图片列表页
+router.get('/imgList',function(req,res){
+	res.render('./imgList.html',{title:'图片列表页'});
+})
+//5、返回音乐列表页
+router.get('/musicList',function(req,res){
+	res.render('./musicList.html',{title:'音乐列表页'});
+})
+//6、返回音乐详情页
+router.get('/musicDetail',function(req,res){
+	res.render('./musicDetail.html',{title:'音乐详情页',data:req.query.data});
+})
+//7、返回电影列表页
+router.get('/movieList',function(req,res){
+	res.render('./movieList.html',{title:'电影列表页'});
+})
+//8、返回电影详情页
+router.get('/movieDetail',function(req,res){
+	res.render('./movieDetail.html',{title:'电影详情页',data:req.query.data});
+})
+//9、返回留言板页
+router.get('/message',function(req,res){
+	res.render('./message.html',{title:'留言板页'});
+})
+//10、返回后台管理页
+router.get('/admin',function(req,res){
+	res.render('./admin.html',{title:'后台管理'});
+})
+module.exports=router;

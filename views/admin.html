@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title><%=title%></title>
+	<link rel="stylesheet" href="./style/main.css">
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/main.js"></script>
+</head>
+<body>
+	<div class="adminWrap">
+		<div class="adminNav">
+			<ul>
+				<li class="bg1">上传文章</li>
+				<li>上传图片</li>
+				<li>上传音乐</li>
+				<li>上传电影</li>
+			</ul>	
+		</div>
+		<!--上传文章-->
+		<div class="adminContent" style="display: block;">
+			<form action="/article_upload" method="post" enctype="multipart/form-data">
+				<dl>
+					<dt>文章标题</dt>
+					<dd><input id="wzTitle" class="inputBorder" type="text" placeholder="请上传文章的标题" name="title"></dd>
+				</dl>
+				<dl>
+					<dt>图片</dt>
+					<dd><input type="file" name="resource"></dd>
+				</dl>
+				<dl>
+					<dt>内容</dt>
+					<dd><textarea name="content" id="" cols="30" rows="10"></textarea></dd>
+				</dl>
+				<dl>
+					<dt>作者</dt>
+					<dd><input name="author" class="inputBorder" type="text" placeholder="请上传作者的姓名"></dd>
+				</dl>
+				<dl class="submit">
+					<dt><input id="wzSubmit" type="submit" value="点击上传"></dt>
+				</dl>							
+			</form>
+		</div>
+		<!--上传图片-->
+		<div class="adminContent">
+			<form action="/image_upload" method="post" enctype="multipart/form-data">
+				<dl>
+					<dt>图片</dt>
+					<dd><input type="file" name="resource"></dd>
+				</dl>
+				<dl>
+					<dt>描述</dt>
+					<dd><textarea name="content" id="" cols="30" rows="10"></textarea></dd>
+				</dl>
+				<dl class="submit">
+					<dt><input type="submit" value="点击上传"></dt>
+				</dl>							
+			</form>
+		</div>
+		<!--上传音乐-->
+		<div class="adminContent">
+			<form action="/music_upload" method="post" enctype="multipart/form-data">
+				<dl>
+					<dt>音乐名称</dt>
+					<dd><input class="inputBorder" type="text" placeholder="请上传音乐的名称" name="title"></dd>
+				</dl>
+				<dl>
+					<dt>音乐文件</dt>
+					<dd><input type="file" name="resource"></dd>
+				</dl>
+				<dl>
+					<dt>歌词</dt>
+					<dd><textarea name="lyrics" id="" cols="30" rows="10"></textarea></dd>
+				</dl>
+				<dl>
+					<dt>演唱者</dt>
+					<dd><input class="inputBorder" type="text" placeholder="请上传演唱者的姓名" name="star"></dd>
+				</dl>
+				<dl class="submit">
+					<dt><input type="submit" value="点击上传"></dt>
+				</dl>							
+			</form>
+		</div>
+		<!--上传电影-->
+		<div class="adminContent">
+			<form action="/movie_upload" method="post" enctype="multipart/form-data">
+				<dl>
+					<dt>电影名称</dt>
+					<dd><input class="inputBorder" type="text" placeholder="请上传电影的名称" name="title"></dd>
+				</dl>
+				<dl>
+					<dt>电影文件</dt>
+					<dd><input type="file" name="resource"></dd>
+				</dl>
+				<dl>
+					<dt>主角</dt>
+					<dd><input class="inputBorder" type="text" placeholder="请上传主角的姓名" name="major"></dd>
+				</dl>
+				<dl class="submit">
+					<dt><input type="submit" value="点击上传"></dt>
+				</dl>							
+			</form>
+		</div>
+	</div>
+</body>
+</html>
